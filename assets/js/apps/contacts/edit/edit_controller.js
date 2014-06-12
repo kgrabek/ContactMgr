@@ -18,7 +18,6 @@ ContactManager.module("ContactsApp.Edit", function(Edit, ContactManager, Backbon
         else{
           view = new ContactManager.ContactsApp.Show.MissingContact();
         }
-
         ContactManager.mainRegion.show(view);
       });
     }
