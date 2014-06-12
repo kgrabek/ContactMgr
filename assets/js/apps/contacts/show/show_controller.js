@@ -2,8 +2,8 @@ ContactManager.module("ContactsApp.Show", function(Show, ContactManager, Backbon
   Show.Controller = {
     showContact: function(id){
       var loadingView = new ContactManager.Common.Views.Loading({
-        title: "Sztuczna opuźniarka",
-        message: "Se poczeka."
+        title: "Artificial Loading Delay",
+        message: "Data loading is delayed to demonstrate using a loading view."
       });
       ContactManager.mainRegion.show(loadingView);
 

@@ -2,8 +2,8 @@ ContactManager.module("ContactsApp.Edit", function(Edit, ContactManager, Backbon
   Edit.Controller = {
     editContact: function(id){
       var loadingView = new ContactManager.Common.Views.Loading({
-        title: "CZEKA!",
-        message: "bo się nie doczeka"
+        title: "Artificial Loading Delay",
+        message: "Data loading is delayed to demonstrate using a loading view."
       });
       ContactManager.mainRegion.show(loadingView);
 
@@ -16,8 +16,12 @@ ContactManager.module("ContactsApp.Edit", function(Edit, ContactManager, Backbon
           });
 
           view.on("form:submit", function(data){
-              contact.save(data);
+            if(contact.save(data)){
               ContactManager.trigger("contact:show", contact.get("id"));
+            }
+            else{
+              view.triggerMethod("form:data:invalid", contact.validationError);
+            }
           });
         }
         else{
