@@ -15,7 +15,7 @@ ContactManager.module("Entities", function(Entities, ContactManager, Backbone, M
 
   var initializeContacts = function(){
     contacts = new Entities.ContactCollection([
-      { id: 1, firstName: "Turbo", lastName: "Paskal", phoneNumber: "555-0184" },
+      { id: 1, firstName: "Aliceaasasasa", lastName: "Arten", phoneNumber: "555-0184" },
       { id: 2, firstName: "Bob", lastName: "Brigham", phoneNumber: "555-0163" },
       { id: 3, firstName: "Charlie", lastName: "Campbell", phoneNumber: "555-0129" }
     ]);
