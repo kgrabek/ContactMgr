@@ -1,3 +1,5 @@
-/**
- * Created by Admin on 2014-06-12.
- */
+ContactManager.module("ContactsApp.Show", function(Show, ContactManager, Backbone, Marionette, $, _){
+  Show.Contact = Marionette.ItemView.extend({
+    template: "#contact-view"
+  });
+});

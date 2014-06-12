@@ -10,9 +10,13 @@ ContactManager.module("ContactsApp.List", function(List, ContactManager, Backbon
     },
 
     highlightName: function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        this.trigger("contact:show", this.model);
+      this.$el.toggleClass("warning");
+    },
+
+    showClicked: function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      this.trigger("contact:show", this.model);
     },
 
     deleteClicked: function(e){
@@ -33,12 +37,6 @@ ContactManager.module("ContactsApp.List", function(List, ContactManager, Backbon
     className: "table table-hover",
     template: "#contact-list",
     itemView: List.Contact,
-    itemViewContainer: "tbody",
-
-    onItemviewContactDelete: function(){
-        this.$el.fadeOut(1000, function(){
-            $(this).fadeIn(1000);
-        });
-    }
+    itemViewContainer: "tbody"
   });
 });
