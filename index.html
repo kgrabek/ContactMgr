@@ -37,7 +37,7 @@
       <td><%= firstName %></td>
       <td><%= lastName %></td>
       <td>
-        <a href="#" class="btn btn-small js-show">
+        <a href="#contacts/<%= id %>" class="btn btn-small js-show">
           <i class="icon-eye-open"></i>
           Show
         </a>
@@ -46,6 +46,10 @@
           Delete
         </button>
       </td>
+    </script>
+
+    <script type="text/template" id="missing-contact-view">
+      <div class="alert alert-error">This contact doesn't exist !</div>
     </script>
 
     <script type="text/template" id="contact-view">
