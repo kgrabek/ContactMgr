@@ -3,8 +3,8 @@ ContactManager.module("ContactsApp.Show", function(Show, ContactManager, Backbon
   Show.Controller = {//tworzymy Controller
     showContact: function(id){//tworzymy metode showContact kontrolera. pobiera id kontaktu
       var loadingView = new ContactManager.Common.Views.Loading({//tworzymy widok ładowania
-        title: "Artificial Loading Delay",//nadajemy mu tytuł
-        message: "Data loading is delayed to demonstrate using a loading view."//i komunikat
+        title: "Trwa ładowanie danych",//nadajemy mu tytuł
+        message: "Proszę czekać."//i komunikat
       });
       ContactManager.mainRegion.show(loadingView);//renderujemy mainRegion wysyłając do niego widok ładowania
 
